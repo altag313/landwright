@@ -3,53 +3,120 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Landwright Privacy Policy</title>
+<title>Landwright</title>
+<meta name="description" content="Landwright is a map puzzle for Android: read the land and rebuild its rivers, roads, towns and forests, hex by hex.">
+<link rel="icon" href="icon.png">
+<meta property="og:title" content="Landwright">
+<meta property="og:description" content="Read the land. Rebuild the map.">
+<meta property="og:image" content="splash.jpg">
 <style>
-  :root { --bg: #f7f5ef; --text: #1f2421; --muted: #5b625d; --accent: #8a6a1f; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #18201e; --text: #e6e8e1; --muted: #a0aaa2; --accent: #e8c872; } }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Georgia, "Times New Roman", serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
-  h1 { font-size: 1.9rem; margin: 0 0 4px; color: var(--accent); }
-  h2 { font-size: 1.15rem; margin: 28px 0 6px; }
-  p, li { margin: 6px 0; }
-  .meta { color: var(--muted); margin-bottom: 24px; }
-  a { color: var(--accent); }
+  :root {
+    --bg: #18201e; --panel: #242f2c; --line: #34423e;
+    --gold: #e8c872; --text: #e6e8e1; --muted: #a0aaa2;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  a { color: var(--gold); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 56px 0 40px; }
+  .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .brand img { width: 64px; height: 64px; border-radius: 14px; }
+  .brand span { font-size: 2.4rem; font-weight: bold; color: var(--gold); letter-spacing: .02em; }
+  .tagline { font-size: 1.6rem; line-height: 1.3; margin: 0 0 14px; }
+  .lede { color: var(--muted); margin: 0 0 22px; }
+  .badge { display: inline-block; padding: 12px 22px; border-radius: 999px; background: var(--gold); color: #1c1f1a;
+           font: bold 1rem/1 system-ui, sans-serif; text-decoration: none; }
+  .badge.soon { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
+  .shot { width: 100%; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 18px 48px rgba(0,0,0,.45); display: block; }
+
+  section { padding: 34px 0; border-top: 1px solid var(--line); }
+  h2 { color: var(--gold); font-size: 1.5rem; margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .97rem; }
+  ul.rules { margin: 0; padding-left: 20px; }
+  ul.rules li { margin: 6px 0; }
+  .levels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .levels .card h3 { color: var(--gold); }
+
+  footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: .95rem; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+  @media (max-width: 760px) {
+    header.hero { grid-template-columns: 1fr; padding-top: 32px; gap: 26px; }
+    .brand span { font-size: 2rem; }
+    .tagline { font-size: 1.35rem; }
+    .grid { grid-template-columns: 1fr; }
+    .levels { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
-<main>
-<h1>Landwright Privacy Policy</h1>
-<p class="meta">Landwright, an Android map puzzle game by Liberato. Effective 24 October 2026.</p>
+<div class="wrap">
 
-<h2>Summary</h2>
-<p>Landwright does not collect, store or share any personal information. It has no accounts, no ads and no analytics, and it does not connect to the internet.</p>
+<header class="hero">
+  <div>
+    <div class="brand"><img src="icon.png" alt="Landwright icon"><span>Landwright</span></div>
+    <p class="tagline">Read the land. Rebuild the map.</p>
+    <p class="lede">A map puzzle for Android. Every map hides its rivers, roads, towns, fields and forests. The hills, valleys and coastline are left showing, and they tell you where everything belongs. Put each piece back, hex by hex.</p>
+    <span class="badge soon">Coming soon to Google Play</span>
+  </div>
+  <img class="shot" src="splash.jpg" alt="A Landwright map: forest, mountains and farmland on a hex grid, with a piece placed for +200 points">
+</header>
 
-<h2>Information the app collects</h2>
-<p>None. Landwright asks for no permissions on your device and does not gather your name, contacts, location, device identifiers, usage data or any other information about you.</p>
+<section>
+  <h2>How it plays</h2>
+  <div class="grid">
+    <div class="card"><h3>Look</h3><p>Valleys show where rivers run. Contour lines show where the land climbs. Badges for cattle, fish, timber and ore show where people would settle.</p></div>
+    <div class="card"><h3>Place</h3><p>Drag a river, village, field or road from the tray onto the hex where it belongs, or tap a piece and then a hex.</p></div>
+    <div class="card"><h3>Reveal</h3><p>Each right piece brings back a little more of the real map, until the whole country is drawn.</p></div>
+  </div>
+</section>
 
-<h2>Information kept on your device</h2>
-<p>To work, the game keeps a few things in its own private storage on your phone:</p>
-<ul>
-  <li>the game in progress, so it can continue where you left off;</li>
-  <li>your best scores, for each map size and level and for each day's Daily map;</li>
-  <li>your settings: music and sound effects on or off, whether the tutorial has been seen, and whether rule tips are shown.</li>
-</ul>
-<p>This information never leaves your phone. Uninstalling Landwright, or clearing its storage in Android's settings, deletes it.</p>
+<section>
+  <h2>A land with rules</h2>
+  <p>Every hidden piece follows the same rules on every map, so you can reason your way to each one:</p>
+  <ul class="rules">
+    <li>Rivers run downhill from high ground to the sea, a lake, or off the map.</li>
+    <li>Fields lie within two hexes of a river, away from the salty shore.</li>
+    <li>Forest covers the green flat land farther from the rivers.</li>
+    <li>Towns and cities rise on rivers and shores where resources gather.</li>
+    <li>Roads join every settlement along the route that climbs the least.</li>
+  </ul>
+</section>
 
-<h2>Sharing</h2>
-<p>When you tap Share at the end of a game, Landwright makes a picture of your map and a short message with the map's name, level and score, and hands them to Android's share sheet. They go only to the app you choose, and only when you choose to send them. What happens to them after that is governed by that app's own privacy policy. Landwright receives nothing back.</p>
+<section>
+  <h2>Four levels</h2>
+  <div class="levels">
+    <div class="card"><h3>Easy</h3><p>Strong hints, glowing spots where a piece can go, and a card that explains why each settlement, field, forest and road belongs.</p></div>
+    <div class="card"><h3>Normal</h3><p>Softer hints and fewer clues on the map.</p></div>
+    <div class="card"><h3>Expert</h3><p>Faint hints, heavier fog, and pieces in the tray that are not on the map at all.</p></div>
+    <div class="card"><h3>Master</h3><p>Expert, with no resource badges to guide you.</p></div>
+  </div>
+</section>
 
-<h2>Third parties</h2>
-<p>Landwright contains no advertising, analytics, tracking or other third party code that collects data.</p>
+<section>
+  <h2>Also inside</h2>
+  <div class="grid">
+    <div class="card"><h3>Tutorial</h3><p>Four short steps teach the rules on one small map. Skip it any time.</p></div>
+    <div class="card"><h3>Daily map</h3><p>A new map every day, the same for every player on the same size and level.</p></div>
+    <div class="card"><h3>Endless worlds</h3><p>Four map sizes, from a quick island to a sprawling country, and a fresh world every time you tap Start.</p></div>
+    <div class="card"><h3>Sound of the land</h3><p>A relaxed jazz soundtrack, and sounds for rivers, waves, wind, livestock and markets as you move across the map.</p></div>
+    <div class="card"><h3>Share your map</h3><p>Send a picture of your finished map and your score to friends.</p></div>
+    <div class="card"><h3>No data collected</h3><p>No accounts, no ads, no tracking. The game never connects to the internet.</p></div>
+  </div>
+</section>
 
-<h2>Children</h2>
-<p>Because Landwright collects no information from anyone, it collects none from children.</p>
+<footer>
+  <div class="row">
+    <span>&copy; 2026 Liberato</span>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:ataglieri@proton.me">ataglieri@proton.me</a>
+  </div>
+</footer>
 
-<h2>Changes to this policy</h2>
-<p>If the app ever changes in a way that affects your privacy, this page will be updated and the effective date above will change.</p>
-
-<h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:ataglieri@proton.me">ataglieri@proton.me</a></p>
-</main>
+</div>
 </body>
 </html>
