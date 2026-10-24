@@ -28,6 +28,10 @@
   .badge { display: inline-block; padding: 12px 22px; border-radius: 999px; background: var(--gold); color: #1c1f1a;
            font: bold 1rem/1 system-ui, sans-serif; text-decoration: none; }
   .badge.soon { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .note { color: var(--muted); font: .9rem/1.4 system-ui, sans-serif; margin: 10px 0 0; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin: 6px 0; }
   .shot { width: 100%; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 18px 48px rgba(0,0,0,.45); display: block; }
 
   section { padding: 34px 0; border-top: 1px solid var(--line); }
@@ -61,7 +65,11 @@
     <div class="brand"><img src="icon.png" alt="Landwright icon"><span>Landwright</span></div>
     <p class="tagline">Read the land. Rebuild the map.</p>
     <p class="lede">A map puzzle for Android. Every map hides its rivers, roads, towns, fields and forests. The hills, valleys and coastline are left showing, and they tell you where everything belongs. Put each piece back, hex by hex.</p>
-    <span class="badge soon">Coming soon to Google Play</span>
+    <div class="actions">
+      <a class="badge" href="https://github.com/altag313/landwright/releases/latest/download/landwright.apk">Download test version</a>
+      <span class="badge soon">Coming soon to Google Play</span>
+    </div>
+    <p class="note">Android 6 or later. A test build: things may change before the Play release. <a href="#install">How to install</a></p>
   </div>
   <img class="shot" src="splash.jpg" alt="A Landwright map: forest, mountains and farmland on a hex grid, with a piece placed for +200 points">
 </header>
@@ -107,6 +115,17 @@
     <div class="card"><h3>Share your map</h3><p>Send a picture of your finished map and your score to friends.</p></div>
     <div class="card"><h3>No data collected</h3><p>No accounts, no ads, no tracking. The game never connects to the internet.</p></div>
   </div>
+</section>
+
+<section id="install">
+  <h2>Installing the test version</h2>
+  <ol class="steps">
+    <li>On your Android phone or tablet, tap <a href="https://github.com/altag313/landwright/releases/latest/download/landwright.apk">Download test version</a>.</li>
+    <li>When the download finishes, open landwright.apk from the notification or your Downloads.</li>
+    <li>If Android asks, allow your browser to install unknown apps, then go back.</li>
+    <li>Tap Install, then Open.</li>
+  </ol>
+  <p class="note">When Landwright arrives on Google Play, you may need to uninstall this test version before installing the Play one.</p>
 </section>
 
 <footer>
